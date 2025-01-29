@@ -77,7 +77,7 @@ nav ul li a:hover {
 }
 .welcome p {
   font-family: "Manrope", serif;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 150%;
   font-weight: 200;
   margin-top: 8px;
@@ -189,69 +189,6 @@ hr {
 .about-me img {
   display: none;
 }
-
-/* ----------------------------- */
-.skills-section {
-  max-width: 1200px;
-  margin: 50px auto;
-  text-align: center;
-}
-
-.skills-section h1 {
-  width: 50%;
-  font-weight: 200;
-  font-size: 100px;
-  line-height: 90%;
-  text-align: left;
-}
-
-.category {
-  margin-bottom: 40px;
-}
-
-.category h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #d3e97a;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  width: 100px;
-}
-
-.skill img {
-  max-width: 60px;
-  height: auto;
-  margin-bottom: 10px;
-  filter: grayscale(100%);
-}
-
-.skill:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.skill span {
-  font-size: 0.9rem;
-  color: #000;
-}
-
 .projects {
   width: 100%;
   height: auto;
@@ -274,6 +211,45 @@ hr {
   font-weight: 200;
   margin-bottom: 80px;
 }
+
+.skills {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+}
+.skills h1 {
+  font-size: 76px;
+  text-align: left;
+}
+.skills h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+.skill-logo {
+  position: relative;
+  width: 100px;
+  max-width: 50%;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.colored-skill {
+  width: 100px;
+  position: absolute;
+  top: -85px;
+  left: 0;
+  display: none;
+  transition: ease-in 2s;
+}
+.skill-logo:hover .colored-skill {
+  display: inline-block;
+}
+
 .project-section {
   width: 100%;
   height: auto;
@@ -425,6 +401,12 @@ hr {
 .lets-connect form button:hover {
   background-color: #e0f296;
 }
+/* .languages{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+} */
 
 @media screen and (max-width: 767px) {
   /* nav ul {
@@ -433,12 +415,32 @@ hr {
   /* nav img {
     display: block;
   } */
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .introduction {
     flex-direction: column;
     gap: 1rem;
   }
   .contacts-me button img {
     width: 40px;
+  }
+  .introduction img {
+    width: 100%;
   }
   hr {
     width: 150%;
@@ -476,14 +478,5 @@ hr {
   }
   .lets-connect form textarea {
     width: 100%;
-  }
-  .skills {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skill {
-    width: 40%;
-    margin-bottom: 20px;
   }
 }
